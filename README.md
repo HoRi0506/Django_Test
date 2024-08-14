@@ -10,7 +10,9 @@
 <br>
 
 ### Django 학습 일지
-- link: https://www.notion.so/python-Django-bb80bec0505e42c6a738cdbe6ebd5a58?pvs=4
+- Chapter 1: https://www.notion.so/Chapter-1-cbb8bbca805945008a5bca8a26477428?pvs=4
+
+- Chapter 2: https://www.notion.so/Chapter-2-27d7aaadce964de88ceba8e69d44bd6d?pvs=4
 
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
