@@ -14,6 +14,10 @@
 
 - Chapter 2: https://www.notion.so/Chapter-2-27d7aaadce964de88ceba8e69d44bd6d?pvs=4
 
+- Chapter 3: https://www.notion.so/Chapter-3-b9b013e6f8f141d49d3bfddc94efaa57?pvs=4
+
+- Chapter 4: https://www.notion.so/Chapter-4-a910d5a06f704a13a66271e91d30997a?pvs=4
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>
