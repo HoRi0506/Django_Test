@@ -6,3 +6,6 @@ class Member(models.Model):
     email = models.CharField(max_length=100)
     profile = models.TextField()
     create_date = models.DateTimeField()
+    
+    def __str__(self):
+        return self.name
