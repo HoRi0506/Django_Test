@@ -30,6 +30,14 @@
 
 <br>
 
+- Chapter 6: https://www.notion.so/Chapter-6-7fea817803d445e6a212b6a4f89b1fd2?pvs=4
+
+<br>
+
+- Chapter 7: https://www.notion.so/Chapter-7-67622a7d3b9c4d348099c888ec35a5af?pvs=4
+
+<br>
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>
