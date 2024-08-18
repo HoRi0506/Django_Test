@@ -1,9 +1,26 @@
+{% comment %} <a href="{% url 'TestDjango:input' %}">사용자 추가</a> {% endcomment %}
+<button type="button" onclick="window.location.href='{% url 'TestDjango:input' %}'">사용자 추가</button>
+
 {% if member_list %}
-    <ul>
-        {% for member in member_list %}
-        <li><a href="/TestDjango/{{member.id}}/">{{member.name}}</a></li>
-        {% endfor %}
-    </ul>
+    {% for member in member_list %}
+        {% if forloop.first %}
+    <table border="1">
+        <tr>
+            <td>번호</td>
+            <td>이름</td>
+            <td colspan="2" style="text-align: center;">처리</td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td><a href="{% url 'TestDjango:detail' member.id %}">{{member.name}}</a></td>
+            <td><a href="{% url 'TestDjango:editform' member.id %}">수정</a></td>
+            <td><a href="{% url 'TestDjango:delete' member.id %}">삭제</a></td>
+        </tr>
+        {% if forloop.last %}
+    </table>
+        {% endif %}
+    {% endfor %}
 {% else %}
     <p>사용자 데이터가 없습니다.</p>
 {% endif %}

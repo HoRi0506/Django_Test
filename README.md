@@ -38,6 +38,14 @@
 
 <br>
 
+- Chapter 8: https://www.notion.so/Chapter-8-5c59f9c8fe3e4c4993f4e7b0676294e0?pvs=4
+
+<br>
+
+- Chapter 9: https://www.notion.so/Chapter-9-dafaca9d0b534ff295cde83f52efb130?pvs=4
+
+<br>
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>
