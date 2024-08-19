@@ -46,7 +46,7 @@
 
 <br>
 
-- Chapter 9: https://www.notion.so/Chapter-10-02b4d9b8fd3743c0a618b61ce6bdfa02?pvs=4
+- Chapter 10: https://www.notion.so/Chapter-10-02b4d9b8fd3743c0a618b61ce6bdfa02?pvs=4
 
 <br>
 
