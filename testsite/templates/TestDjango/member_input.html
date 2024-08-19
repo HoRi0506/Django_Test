@@ -1,11 +1,17 @@
-<h1>사용자 추가</h1>
+{% load static %}
 
-<form method="post" action="{% url 'TestDjango:create' %}">
-    {% comment %} CSRF 검증 실패 오류를 방지하기 위해 아래의 코드를 추가 {% endcomment %}
-    {% csrf_token %}
-    이름 : <input type="text" name="name"><br>
-    이메일 : <input type="text" name="email"><br>
-    프로필<br>
-    <textarea name="profile"></textarea><br>
-    <input type="submit" value="저장">
-</form>
+<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+
+<div class="container mt-4">
+    <h1>사용자 추가</h1>
+
+    <form method="post" action="{% url 'TestDjango:create' %}">
+        {% comment %} CSRF 검증 실패 오류를 방지하기 위해 아래의 코드를 추가 {% endcomment %}
+        {% csrf_token %}
+        이름 : <input type="text" name="name" class="form-control"><br>
+        이메일 : <input type="text" name="email" class="form-control"><br>
+        프로필<br>
+        <textarea name="profile" class="form-control"></textarea><br>
+        <input type="submit" value="저장" class="btn btn-danger">
+    </form>
+</div>
