@@ -1,6 +1,6 @@
-{% load static %}
+{% extends "frame.html" %}
 
-<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+{% block content %}
 <div class="container mt-3">
     <a href="{% url 'TestDjango:input' %}" class="btn btn-primary mb-3">사용자 추가</a>
     {% comment %} <button type="button" onclick="window.location.href='{% url 'TestDjango:input' %}'">사용자 추가</button> {% endcomment %}
@@ -29,4 +29,4 @@
         <p>사용자 데이터가 없습니다.</p>
     {% endif %}
 </div>
-
+{% endblock %}

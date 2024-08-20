@@ -1,7 +1,6 @@
-{% load static %}
+{% extends "frame.html" %}
 
-<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
-
+{% block content %}
 <div class="container mt-4">
     <h1>사용자 추가</h1>
 
@@ -15,3 +14,4 @@
         <input type="submit" value="저장" class="btn btn-danger">
     </form>
 </div>
+{% endblock %}

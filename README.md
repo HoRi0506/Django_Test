@@ -50,6 +50,10 @@
 
 <br>
 
+- Chapter 11: https://www.notion.so/Chapter-11-a9beb1bf4a6047d59b74826b3058f362?pvs=4
+
+<br>
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>
