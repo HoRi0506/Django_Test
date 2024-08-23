@@ -1,0 +1,13 @@
+{% extends 'frame.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h1>사용자 추가</h1>
+
+    <form method="post">
+        {% comment %} CSRF 검증 실패 오류를 방지하기 위해 아래의 코드를 추가 {% endcomment %}
+        {% csrf_token %}
+        {{ form.as_p }} {% comment %} 기존의 member_input.html에서 html 코드를 전부 작성해준 것과 달리 forms는 자동으로 html 코드를 생성해줌 {% endcomment %}
+        <input type="submit" value="저장" class="btn btn-danger">
+    </form>
+</div>
+{% endblock %}

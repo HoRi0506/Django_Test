@@ -54,6 +54,10 @@
 
 <br>
 
+- Chapter 12: https://www.notion.so/Chapter-12-bead6c0855ab4edd82a37d6d8dc8cecc?pvs=4
+
+<br>
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>

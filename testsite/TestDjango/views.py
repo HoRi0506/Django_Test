@@ -2,6 +2,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Member
+from .forms import MemberForm
 
 # Create your views here.
 def index(request):
@@ -53,3 +54,16 @@ def editsave(request):
     member.save()
     
     return redirect('TestDjango:index')
+
+def member_create(request):
+    if request.method == 'POST':
+        form = MemberForm(request.POST)
+        if form.is_valid():
+            member = form.save(commit=False)
+            member.create_date = timezone.now()
+            member.save()
+            return redirect('TestDjango:index')
+    else:    
+        form = MemberForm()
+        
+    return render(request, template_name='TestDjango/member_form.html', context={'form':form})
