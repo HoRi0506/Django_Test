@@ -58,6 +58,10 @@
 
 <br>
 
+- Chapter 13: https://www.notion.so/Chapter-13-589e5c61650f43a7b064716cbbc44d2d?pvs=4
+
+<br>
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>

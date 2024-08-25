@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.js' %}">
+    <script src="{% static 'bootstrap.min.js' %}"></script>
 </head>
 <body>
+{% include "menu.html" %}
 {% block content %}
 {% endblock %}
 </body>
