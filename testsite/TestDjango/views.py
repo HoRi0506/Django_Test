@@ -3,12 +3,15 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Member
 from .forms import MemberForm
+from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
-    # return HttpResponse('Welcome to the world of Django')
+    cur_page = request.GET.get('page', 1) # page
     member_list = Member.objects.order_by('-create_date')
-    context = {'member_list' : member_list}
+    paginator = Paginator(member_list, 10) # 페이지 당 10개
+    page = paginator.get_page(cur_page) # page 오브젝트 생성
+    context = {'member_list' : page}
     return render(request, template_name='TestDjango/member_list.html', context=context)
 
 def detail(request, member_id):
