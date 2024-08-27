@@ -62,7 +62,7 @@
 
 <br>
 
-- Chapter 14-1 & 14-2: https://www.notion.so/Chapter-14-83c78a18f5504c4e9ff3f2e4608ec8d8?pvs=4
+- Chapter 14: https://www.notion.so/Chapter-14-83c78a18f5504c4e9ff3f2e4608ec8d8?pvs=4
 
 <br>
 
