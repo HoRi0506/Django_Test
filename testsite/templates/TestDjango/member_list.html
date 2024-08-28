@@ -16,7 +16,7 @@
             </tr>
             {% endif %}
             <tr>
-                <td>{{ forloop.counter }}</td>
+                <td>{{ member.id }}</td>
                 <td><a href="{% url 'TestDjango:detail' member.id %}">{{member.name}}</a></td>
                 <td><a href="{% url 'TestDjango:editform' member.id %}">수정</a></td>
                 <td><a href="{% url 'TestDjango:delete' member.id %}">삭제</a></td>

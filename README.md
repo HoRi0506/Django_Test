@@ -66,6 +66,10 @@
 
 <br>
 
+- Chapter 15: https://www.notion.so/Chapter-15-058e1c68b3eb4f99819dec11f16aeb6a?pvs=4
+
+<br>
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>
