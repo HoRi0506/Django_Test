@@ -70,6 +70,10 @@
 
 <br>
 
+- Chapter 16: https://www.notion.so/Chapter-16-6507d4e0de444386bf9e23255f1229e0?pvs=4
+
+<br>
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>
