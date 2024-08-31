@@ -74,6 +74,13 @@
 
 <br>
 
+---
+<br>
+
+- Custom Chapter 1: https://www.notion.so/Custom-1-001c703ead7740dc97c7b231446f900d?pvs=4
+  
+<br>
+
 - reference: https://www.youtube.com/watch?v=EruwzgOGpag
 
 <br>
