@@ -7,12 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'bootstrap.min.js' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <script src="{% static 'bootstrap.min.js' %}"></script>
 </head>
 <body>
-{% include "menu.html" %}
-{% block content %}
-{% endblock %}
+
+<!-- 네비게이션 바 -->
+<nav class="navbar" style="position: relative; z-index: 3;">
+    {% include "menu.html" %}
+</nav>
+
+<div class="content-container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<script src="{% static 'glowEffect.js' %}"></script>
 </body>
 </html>
