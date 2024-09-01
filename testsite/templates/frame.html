@@ -11,17 +11,48 @@
     <script src="{% static 'bootstrap.min.js' %}"></script>
 </head>
 <body>
+    <!-- 네비게이션 바 포함 -->
+    <nav class="navbar">
+        {% include "menu.html" %}
+    </nav>
 
-<!-- 네비게이션 바 -->
-<nav class="navbar" style="position: relative; z-index: 3;">
-    {% include "menu.html" %}
-</nav>
+    <!-- 오디오 태그 및 음악 제어 아이콘 -->
+    <div class="audio-player">
+        <audio id="audioElement" autoplay loop>
+            <source src="{% static 'Vivid Night.wav' %}" type="audio/wav" id="audioSource">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="playPauseBtn">⏸</button>
+        <span id="currentMusicTitle">Vivid Night</span> <!-- 현재 재생 중인 음악의 이름 -->
+        <button id="menuToggle">☰</button>
+        <div class="audio-controls" id="audioControls">
+            <label for="volumeControl">Volume: <span id="volumeValue">50</span>%</label>
+            <input id="volumeControl" type="range" min="0" max="100" value="50">
+            <label for="musicSelect">Change Music:</label>
+            <select id="musicSelect">
+                <option value="Vivid Night.wav" selected>Vivid Night</option>
+                <option value="Another Track.wav">Another Track</option>
+                <option value="Third Track.wav">Third Track</option>
+            </select>
+        </div>
+    </div>
 
-<div class="content-container">
-    {% block content %}
-    {% endblock %}
-</div>
+    <!-- 바 그래프 배경 -->
+    <div class="background-layer">
+        <canvas id="waveformCanvas" class="waveform-canvas"></canvas>
+    </div>
 
-<script src="{% static 'glowEffect.js' %}"></script>
+    <!-- 격자 패턴 배경 -->
+    <div class="grid-container">
+        <div class="grid"></div>
+    </div>
+
+    <!-- 페이지 콘텐츠 -->
+    <div class="content-container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="{% static 'visualizer.js' %}"></script>
 </body>
 </html>

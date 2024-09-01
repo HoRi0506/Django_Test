@@ -1,80 +1,163 @@
-/* 기존 테이블 스타일 */
-tr:nth-child(odd) {
-    color: white;
-    background-color: brown;
-}
-
-tr:nth-child(even) {
-    background-color: yellowgreen;
-}
-
+/* 페이지 기본 설정 */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+    margin: 0; /* 페이지의 기본 여백 제거 */
+    padding-top: 60px; /* 네비게이션 바에 대한 상단 여백 */
+    background-color: #ffffff; /* 페이지 배경색을 흰색으로 설정 */
+    height: 100vh; /* 페이지 높이를 뷰포트 높이로 설정 */
+    overflow: hidden; /* 페이지에서 스크롤바를 숨김 */
+    position: relative; /* 자식 요소의 위치를 기준으로 사용 */
 }
 
+/* 네비게이션 바 설정 */
+.navbar {
+    position: fixed; /* 네비게이션 바를 페이지 상단에 고정 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 네비게이션 바의 가로 폭을 100%로 설정 */
+    height: 60px; /* 네비게이션 바의 높이를 60px로 설정 */
+    z-index: 5; /* 네비게이션 바를 최상단에 표시 */
+    background-color: #ffffff; /* 네비게이션 바 배경색을 흰색으로 설정 */
+    color: white;
+    padding: 10px 20px; /* 네비게이션 바의 안쪽 여백 설정 */
+}
+
+/* 커스텀 네비게이션 바 설정 */
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.8) !important; /* 반투명 효과 적용 */
+    color: white;
+}
+
+/* 바 그래프를 그릴 캔버스 설정 */
+.waveform-canvas {
+    position: fixed; /* 캔버스를 배경으로 고정 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 캔버스의 가로 폭을 100%로 설정 */
+    height: 100%; /* 캔버스의 높이를 100%로 설정 */
+    z-index: 2; /* 캔버스를 네비게이션 바 아래에 표시 */
+    pointer-events: none; /* 캔버스에서 사용자의 상호작용을 차단 */
+}
+
+/* 격자 패턴 배경 설정 */
 .grid-container {
-    position: absolute;
+    position: fixed; /* 배경을 고정 */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    z-index: 1;  /* 격자 패턴을 z-index 1로 설정 */
+    width: 100%; /* 배경의 가로 폭을 100%로 설정 */
+    height: 100%; /* 배경의 높이를 100%로 설정 */
+    background-color: rgba(255, 255, 255, 0.4); /* 배경색을 검정색으로 설정하고 반투명도 조정 */
+    z-index: 3; /* 격자 패턴을 바 그래프 위에 표시 */
+    pointer-events: none; /* 배경에서 사용자의 상호작용을 차단 */
 }
 
+/* 격자 패턴 설정 */
 .grid {
-    position: absolute;
+    position: absolute; /* 격자를 배경에 절대 위치로 설정 */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, transparent 49%, #333 50%, transparent 51%),
-                      linear-gradient(to bottom, transparent 49%, #333 50%, transparent 51%);
-    background-size: 50px 50px;
+    width: 100%; /* 격자의 가로 폭을 100%로 설정 */
+    height: 100%; /* 격자의 높이를 100%로 설정 */
+    background-image: linear-gradient(to right, #ffffff 50%, transparent 50%), /* 가로선 설정 */
+                      linear-gradient(to bottom, #ffffff 50%, transparent 50%); /* 세로선 설정 */
+    background-size: 50px 50px; /* 격자 패턴의 크기를 설정 */
+    background-repeat: repeat; /* 격자 패턴이 반복되도록 설정 */
+    background-blend-mode: normal; /* 배경 혼합 모드를 기본으로 설정 */
 }
 
-.glow {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    z-index: 2;  /* 불빛이 항상 격자 패턴 위에 표시되도록 z-index 2 설정 */
-}
-
-.form-container {
+/* 콘텐츠 영역 설정 */
+.content-container {
     position: relative;
-    z-index: 3;  /* 폼이 가장 위에 표시되도록 z-index 3 설정 */
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 4; /* 콘텐츠가 격자 패턴 위에 표시되도록 설정 */
+    padding: 20px; /* 콘텐츠 영역의 안쪽 여백 설정 */
+}
+
+/* 오디오 플레이어 설정 */
+.audio-player {
+    position: fixed; /* 오디오 플레이어를 페이지에 고정 */
+    bottom: 10px;
+    left: 10px;
+    z-index: 5; /* 오디오 플레이어가 상단에 표시되도록 설정 */
+    display: flex; /* 오디오 플레이어의 요소들을 수평 정렬 */
+    align-items: center; /* 오디오 플레이어의 요소들을 수직 중앙 정렬 */
+}
+
+/* 오디오 태그 숨김 */
+#audioElement {
+    display: none;
+}
+
+/* 재생/일시정지 버튼 설정 */
+#playPauseBtn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* 현재 재생 중인 음악 제목 설정 */
+#currentMusicTitle {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* 메뉴 토글 버튼 설정 */
+#menuToggle {
+    margin-left: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* 오디오 컨트롤 설정 */
+.audio-controls {
+    visibility: hidden; /* 초기에는 오디오 컨트롤이 보이지 않도록 설정 */
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8); /* 배경을 흰색으로 설정하고 반투명도 조정 */
+    border-radius: 5px; /* 오디오 컨트롤의 모서리를 둥글게 설정 */
+    padding: 10px; /* 오디오 컨트롤의 안쪽 여백 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 설정 */
+    transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease; /* 애니메이션 설정 */
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+/* 오디오 컨트롤 활성화 설정 */
+.audio-controls.show {
+    visibility: visible; /* 오디오 컨트롤이 보이도록 설정 */
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 테이블 스타일 설정 */
+.table {
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
-    backdrop-filter: blur(5px);
+    overflow: hidden;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.table-dark {
+    border-radius: 10px 10px 0 0;
 }
 
-@keyframes moveBackground {
-    from { background-position: 0 0; }
-    to { background-position: 100% 100%; }
+/* 버튼 스타일 설정 */
+.btn {
+    border-radius: 10px;
+}
+
+/* 폼 스타일 설정 */
+form {
+    position: relative;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.8); /* 폼 배경을 흰색으로 설정하고 반투명도 조정 */
+    padding: 20px; /* 폼의 안쪽 여백 설정 */
+    border-radius: 10px; /* 폼의 모서리를 둥글게 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 폼에 그림자 설정 */
+    max-width: 400px; /* 폼의 최대 가로 크기 설정 */
+    margin: 0 auto; /* 폼을 가운데 정렬 */
 }
